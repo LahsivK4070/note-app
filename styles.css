@@ -13,6 +13,7 @@ body{
     color: rgb(255, 255, 255);
     padding: 1rem;
     position: fixed;
+    font-weight: 700;
     width: 100%;
 }
 
@@ -40,6 +41,17 @@ body{
     margin-top: 1rem;
     margin-left: 2rem;
     padding-bottom: 0.5rem;
+}
+
+.top-container input{
+    display: block;
+    width: 50%;
+    margin: 1rem auto;
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.192);
+    padding: 1rem;
+    font-size: 16px;
 }
 
 .top-container textarea{
@@ -70,6 +82,10 @@ body{
     color: rgb(255, 235, 59);
     transition-duration: 0.5s;
     cursor: pointer;
+}
+
+.top-container button:active{
+    transform: scale(0.90);
 }
 
 .bottom-container{
@@ -116,6 +132,10 @@ body{
     color: white;
     cursor: pointer;
     transition-duration: 0.3s;
+}
+
+.card .card-detail button:active{
+    transform: scale(0.90);
 }
 
 footer{
