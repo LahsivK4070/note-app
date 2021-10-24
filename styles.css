@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.heading{
+    background-color: rgb(255, 235, 59);
+    color: rgb(255, 255, 255);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+}
+
+.heading h1{
+    margin-left: 1rem;
+    display: inline;
+    font-weight: 700;
+}
+
+.heading img{
+    width: 2.5rem;
+    position: absolute;
+    right: 4rem;
+}
+
+.top-container{
+    padding-top: 5rem;
+    text-align: center;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.192);
+}
+
+.top-container label{
+    display: block;
+    font-weight: 500;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    padding-bottom: 0.5rem;
+}
+
+.top-container textarea{
+    display: block;
+    width: 70%;
+    height: 7rem;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.192);
+    padding: 1rem;
+    font-size: 16px;
+}
+
+.top-container button{
+    margin: 1rem 0;
+    padding: 0.5rem 2rem;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    background: rgb(255, 235, 59);
+    border: 2px solid rgb(255, 235, 59);
+    color: white;
+}
+
+.top-container button:hover{
+    border: 2px solid rgb(255, 235, 59);
+    background-color: white;
+    color: rgb(255, 235, 59);
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.bottom-container{
+    display: grid;
+    margin-bottom: 8rem;
+}
+
+.card{
+    width: 70%;
+    margin: 2rem auto;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding-bottom: 1.5rem;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.062);
+}
+
+.card .card-detail{
+    background: rgba(0, 0, 0, 0.493);
+    color: white;
+    border-radius: 20px 20px 0 0;
+    padding: 1rem 1rem 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card .card-data{
+    margin: 0 2rem;
+    line-height: 1.5;
+}
+
+.card .card-detail button{
+    padding: 0.5rem 0.8rem;
+    border: 2px solid rgb(255, 255, 255);
+    background: white;
+    color: black;
+    border-radius: 10px;
+}
+
+.card .card-detail button:hover{
+    border: 2px solid white;
+    background: black;
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    background-color: black;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+}
+
+footer ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+footer ul li{
+    padding: 1rem 1.5rem;
+}
+
+footer a{
+    color: white;
+}
+footer a:hover{
+    color: rgb(255, 235, 59);
+}
+
+@media (min-width: 786px) {
+    .bottom-container{
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .bottom-container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
