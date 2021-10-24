@@ -2,6 +2,7 @@ showNotes();            // calling the function so that when the page loads the 
 
 var textArea = document.querySelector(".add-text");
 var addBtn = document.querySelector(".add-btn");
+var title = document.querySelector(".note-title");
 
 var notesArr = [];
 
@@ -25,13 +26,22 @@ addBtn.addEventListener("click", function (err) {
         notesArr = JSON.parse(notesData);
     }
 
-    notesArr.push(textArea.value);
-    if (textArea.value == "") {
+    let noteVal = {
+        "title": title.value,
+        "note": textArea.value
+    };
+
+    notesArr.push(noteVal);
+    if (textArea.value == "" ) {
         alert("Write something first.");
+    }
+    else if (title.value == "") {
+        alert("write a title.");
     }
     else {
         localStorage.setItem("notes", JSON.stringify(notesArr));
         textArea.value = "";
+        title.value = "";
         console.log(notesArr);
         showNotes();
     }         // to display a new card of recently stored data
@@ -61,11 +71,11 @@ function showNotes() {
         html += `
                 <div class="card">
                     <div class="card-detail">
-                        <h3>Note ${index + 1}</h3>
+                        <h3>${element.title}</h3>
                         <button type="button" id="${index}" onclick="deleteNote(this.id)" >Delete</button>
                     </div>
                     <div class="card-data">
-                        <p>${element}</p>
+                        <p>${element.note}</p>
                     </div>
                 </div>
                 `
@@ -97,6 +107,7 @@ function deleteNote(index) {
     else {
         notesArr = JSON.parse(notesData);
     }
+
 
     notesArr.splice(index, 1);      // deletes from index to no of values in array
     localStorage.setItem("notes", JSON.stringify(notesArr));
